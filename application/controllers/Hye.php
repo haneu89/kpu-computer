@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hye extends CI_Controller {
     public function index() {
-        $this->__slack('잉잉');
+        $this->__slack('꿀뽀');
         echo "안녕하십니까";
         // $this->load->view('kpu');
     }
