@@ -3,21 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hello extends CI_Controller {
     public function index() {
-        $this->__slack('메시지 테스트');
-        echo "안녕하십니까";
-        // $this->load->view('kpu');
+        $this->load->view('jinhyung_form');
     }
-    public function hi($name) {
-        // echo "하이$name";
-        // $this->load->view('common/header');
-        $this->load->view('kpu', array("name" => "김진형"));
+    public function message() {
+        $message = $_POST['message'];
+        $this->__slack($message);
     }
     public function __slack($message) {
         $url = "https://hooks.slack.com/services/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";
         $data = "payload=" . json_encode(
           array(
               "channel"       =>  "#random",
-              "username"      =>  "KPU",
+              "username"      =>  "김진형",
               "text"          =>  $message,
           )
         );
