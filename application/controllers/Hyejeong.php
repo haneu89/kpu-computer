@@ -6,6 +6,6 @@
     <form action="", method="GET">
         <input type = "text" name="message" />
     </form>
-    <button>전송</button>
+    <button>등록</button>
 </body>
 </html>
